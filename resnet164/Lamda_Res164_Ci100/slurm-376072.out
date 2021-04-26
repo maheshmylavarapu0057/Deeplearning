@@ -1,0 +1,45 @@
+==========================================
+SLURM_JOB_ID = 376072
+SLURM_NODELIST = gnode40
+SLURM_JOB_GPUS = 1
+==========================================
+Train completed
+Test noise series are impulse_noise.npy, speckle_noise.npy, gaussian_noise.npy, shot_noise.npy
+done loading
+line 37
+line 44
+line 44
+line 44
+line 44
+[0.33578, 0.39806, 0.29328, 0.38432]
+Test noise completed
+Test_fgsm r=1
+Files already downloaded and verified
+line 45
+0.3489
+Test_fgsm r=2
+Files already downloaded and verified
+line 45
+0.2003
+Test_fgsm r=4
+Files already downloaded and verified
+line 45
+0.1165
+Test_ifgsm r=1
+Files already downloaded and verified
+0.251
+Test_ifgsm r=2
+Files already downloaded and verified
+0.057
+Test_ifgsm r=4
+Files already downloaded and verified
+0.006
+Test_pgd r=1
+Files already downloaded and verified
+0.2383
+Test_pgd r=2
+Files already downloaded and verified
+0.0417
+Test_pgd r=4
+Files already downloaded and verified
+0.0034

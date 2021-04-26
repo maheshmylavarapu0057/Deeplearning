@@ -1,0 +1,229 @@
+==========================================
+SLURM_JOB_ID = 356792
+SLURM_NODELIST = gnode48
+SLURM_JOB_GPUS = 0,1,2,3
+==========================================
+Train completed
+Test noise series are impulse_noise.npy, speckle_noise.npy, gaussian_noise.npy, shot_noise.npy
+Traceback (most recent call last):
+  File "test_noise.py", line 51, in <module>
+    outputs = net(inputs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 333, in forward
+    x=b(x)+(1-functional.relu(1-self.ks[i])).expand_as(residual)*residual
+RuntimeError: CUDA out of memory. Tried to allocate 64.00 MiB (GPU 0; 10.76 GiB total capacity; 9.64 GiB already allocated; 5.12 MiB free; 9.80 GiB reserved in total by PyTorch)
+Test noise completed
+Test_fgsm r=1
+Files already downloaded and verified
+torch.Size([400, 3, 32, 32])
+Traceback (most recent call last):
+  File "test_fgsm.py", line 60, in <module>
+    outputs = net(inputs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 311, in forward
+    residual=self.downsample1(x)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 82, in forward
+    x=self.downsample(x)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 136, in forward
+    self.weight, self.bias, bn_training, exponential_average_factor, self.eps)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py", line 2016, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 26.00 MiB (GPU 0; 10.76 GiB total capacity; 9.67 GiB already allocated; 25.12 MiB free; 9.76 GiB reserved in total by PyTorch)
+Test_fgsm r=2
+Files already downloaded and verified
+torch.Size([400, 3, 32, 32])
+Traceback (most recent call last):
+  File "test_fgsm.py", line 60, in <module>
+    outputs = net(inputs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 311, in forward
+    residual=self.downsample1(x)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 82, in forward
+    x=self.downsample(x)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 136, in forward
+    self.weight, self.bias, bn_training, exponential_average_factor, self.eps)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py", line 2016, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 26.00 MiB (GPU 0; 10.76 GiB total capacity; 9.67 GiB already allocated; 25.12 MiB free; 9.76 GiB reserved in total by PyTorch)
+Test_fgsm r=4
+Files already downloaded and verified
+torch.Size([400, 3, 32, 32])
+Traceback (most recent call last):
+  File "test_fgsm.py", line 60, in <module>
+    outputs = net(inputs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 311, in forward
+    residual=self.downsample1(x)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 82, in forward
+    x=self.downsample(x)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 136, in forward
+    self.weight, self.bias, bn_training, exponential_average_factor, self.eps)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py", line 2016, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 26.00 MiB (GPU 0; 10.76 GiB total capacity; 9.67 GiB already allocated; 25.12 MiB free; 9.76 GiB reserved in total by PyTorch)
+Test_ifgsm r=1
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "test_ifgsm.py", line 80, in <module>
+    inputs_grad = torch.autograd.grad(loss, inputs)[0]
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/autograd/__init__.py", line 192, in grad
+    inputs, allow_unused)
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+Exception raised from createCuDNNHandle at /pytorch/aten/src/ATen/cudnn/Handle.cpp:9 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x42 (0x146bbc3e71e2 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xfef088 (0x146bbd83f088 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: at::native::getCudnnHandle() + 0x108d (0x146bbd84096d in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xebcaec (0x146bbd70caec in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xeb800e (0x146bbd70800e in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0xeb9bfb (0x146bbd709bfb in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: at::native::cudnn_convolution_backward_input(c10::ArrayRef<long>, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool) + 0xb2 (0x146bbd70a152 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xf1f35b (0x146bbd76f35b in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: <unknown function> + 0xf4f178 (0x146bbd79f178 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: at::cudnn_convolution_backward_input(c10::ArrayRef<long>, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool) + 0x1ad (0x146bf864788d in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x223 (0x146bbd708823 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: <unknown function> + 0xf1f445 (0x146bbd76f445 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0xf4f1d4 (0x146bbd79f1d4 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #13: at::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x1e2 (0x146bf8656242 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x2ec9c62 (0x146bfa319c62 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x2ede224 (0x146bfa32e224 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: at::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x1e2 (0x146bf8656242 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: torch::autograd::generated::CudnnConvolutionBackward::apply(std::vector<at::Tensor, std::allocator<at::Tensor> >&&) + 0x258 (0x146bfa1a0c38 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x3375bb7 (0x146bfa7c5bb7 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: torch::autograd::Engine::evaluate_function(std::shared_ptr<torch::autograd::GraphTask>&, torch::autograd::Node*, torch::autograd::InputBuffer&, std::shared_ptr<torch::autograd::ReadyQueue> const&) + 0x1400 (0x146bfa7c1400 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: torch::autograd::Engine::thread_main(std::shared_ptr<torch::autograd::GraphTask> const&) + 0x451 (0x146bfa7c1fa1 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: torch::autograd::Engine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x89 (0x146bfa7ba119 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: torch::autograd::python::PythonEngine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x4a (0x146c07f5a4ba in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_python.so)
+frame #23: <unknown function> + 0xd0b10 (0x146c090c9b10 in /usr/lib/x86_64-linux-gnu/libstdc++.so.6)
+frame #24: <unknown function> + 0x76ba (0x146c0ae8e6ba in /lib/x86_64-linux-gnu/libpthread.so.0)
+frame #25: clone + 0x6d (0x146c0abc44dd in /lib/x86_64-linux-gnu/libc.so.6)
+
+Test_ifgsm r=2
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "test_ifgsm.py", line 80, in <module>
+    inputs_grad = torch.autograd.grad(loss, inputs)[0]
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/autograd/__init__.py", line 192, in grad
+    inputs, allow_unused)
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+Exception raised from createCuDNNHandle at /pytorch/aten/src/ATen/cudnn/Handle.cpp:9 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x42 (0x14885f5cb1e2 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xfef088 (0x148860a23088 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: at::native::getCudnnHandle() + 0x108d (0x148860a2496d in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xebcaec (0x1488608f0aec in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xeb800e (0x1488608ec00e in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0xeb9bfb (0x1488608edbfb in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: at::native::cudnn_convolution_backward_input(c10::ArrayRef<long>, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool) + 0xb2 (0x1488608ee152 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xf1f35b (0x14886095335b in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: <unknown function> + 0xf4f178 (0x148860983178 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: at::cudnn_convolution_backward_input(c10::ArrayRef<long>, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool) + 0x1ad (0x14889b82b88d in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x223 (0x1488608ec823 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: <unknown function> + 0xf1f445 (0x148860953445 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0xf4f1d4 (0x1488609831d4 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #13: at::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x1e2 (0x14889b83a242 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x2ec9c62 (0x14889d4fdc62 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x2ede224 (0x14889d512224 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: at::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x1e2 (0x14889b83a242 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: torch::autograd::generated::CudnnConvolutionBackward::apply(std::vector<at::Tensor, std::allocator<at::Tensor> >&&) + 0x258 (0x14889d384c38 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x3375bb7 (0x14889d9a9bb7 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: torch::autograd::Engine::evaluate_function(std::shared_ptr<torch::autograd::GraphTask>&, torch::autograd::Node*, torch::autograd::InputBuffer&, std::shared_ptr<torch::autograd::ReadyQueue> const&) + 0x1400 (0x14889d9a5400 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: torch::autograd::Engine::thread_main(std::shared_ptr<torch::autograd::GraphTask> const&) + 0x451 (0x14889d9a5fa1 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: torch::autograd::Engine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x89 (0x14889d99e119 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: torch::autograd::python::PythonEngine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x4a (0x1488ab13e4ba in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_python.so)
+frame #23: <unknown function> + 0xd0b10 (0x1488ac2adb10 in /usr/lib/x86_64-linux-gnu/libstdc++.so.6)
+frame #24: <unknown function> + 0x76ba (0x1488ae0726ba in /lib/x86_64-linux-gnu/libpthread.so.0)
+frame #25: clone + 0x6d (0x1488adda84dd in /lib/x86_64-linux-gnu/libc.so.6)
+
+Test_ifgsm r=4
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "test_ifgsm.py", line 80, in <module>
+    inputs_grad = torch.autograd.grad(loss, inputs)[0]
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/autograd/__init__.py", line 192, in grad
+    inputs, allow_unused)
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+Exception raised from createCuDNNHandle at /pytorch/aten/src/ATen/cudnn/Handle.cpp:9 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x42 (0x149f66c991e2 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xfef088 (0x149f680f1088 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: at::native::getCudnnHandle() + 0x108d (0x149f680f296d in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0xebcaec (0x149f67fbeaec in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xeb800e (0x149f67fba00e in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0xeb9bfb (0x149f67fbbbfb in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: at::native::cudnn_convolution_backward_input(c10::ArrayRef<long>, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool) + 0xb2 (0x149f67fbc152 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #7: <unknown function> + 0xf1f35b (0x149f6802135b in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #8: <unknown function> + 0xf4f178 (0x149f68051178 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: at::cudnn_convolution_backward_input(c10::ArrayRef<long>, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool) + 0x1ad (0x149fa2ef988d in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: at::native::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x223 (0x149f67fba823 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: <unknown function> + 0xf1f445 (0x149f68021445 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0xf4f1d4 (0x149f680511d4 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cuda.so)
+frame #13: at::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x1e2 (0x149fa2f08242 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x2ec9c62 (0x149fa4bcbc62 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x2ede224 (0x149fa4be0224 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: at::cudnn_convolution_backward(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, long, bool, bool, std::array<bool, 2ul>) + 0x1e2 (0x149fa2f08242 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: torch::autograd::generated::CudnnConvolutionBackward::apply(std::vector<at::Tensor, std::allocator<at::Tensor> >&&) + 0x258 (0x149fa4a52c38 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x3375bb7 (0x149fa5077bb7 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: torch::autograd::Engine::evaluate_function(std::shared_ptr<torch::autograd::GraphTask>&, torch::autograd::Node*, torch::autograd::InputBuffer&, std::shared_ptr<torch::autograd::ReadyQueue> const&) + 0x1400 (0x149fa5073400 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: torch::autograd::Engine::thread_main(std::shared_ptr<torch::autograd::GraphTask> const&) + 0x451 (0x149fa5073fa1 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: torch::autograd::Engine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x89 (0x149fa506c119 in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: torch::autograd::python::PythonEngine::thread_init(int, std::shared_ptr<torch::autograd::ReadyQueue> const&, bool) + 0x4a (0x149fb280c4ba in /home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/lib/libtorch_python.so)
+frame #23: <unknown function> + 0xd0b10 (0x149fb397bb10 in /usr/lib/x86_64-linux-gnu/libstdc++.so.6)
+frame #24: <unknown function> + 0x76ba (0x149fb57406ba in /lib/x86_64-linux-gnu/libpthread.so.0)
+frame #25: clone + 0x6d (0x149fb54764dd in /lib/x86_64-linux-gnu/libc.so.6)
+
+Test_pgd r=1
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "test_pgd.py", line 80, in <module>
+    outputs = net(inputs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 333, in forward
+    x=b(x)+(1-functional.relu(1-self.ks[i])).expand_as(residual)*residual
+RuntimeError: CUDA out of memory. Tried to allocate 64.00 MiB (GPU 0; 10.76 GiB total capacity; 9.36 GiB already allocated; 31.12 MiB free; 9.75 GiB reserved in total by PyTorch)
+Test_pgd r=2
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "test_pgd.py", line 80, in <module>
+    outputs = net(inputs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 333, in forward
+    x=b(x)+(1-functional.relu(1-self.ks[i])).expand_as(residual)*residual
+RuntimeError: CUDA out of memory. Tried to allocate 64.00 MiB (GPU 0; 10.76 GiB total capacity; 9.36 GiB already allocated; 31.12 MiB free; 9.75 GiB reserved in total by PyTorch)
+Test_pgd r=4
+Files already downloaded and verified
+Traceback (most recent call last):
+  File "test_pgd.py", line 80, in <module>
+    outputs = net(inputs)
+  File "/home2/mylavarapu.maheswara/miniconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home2/mylavarapu.maheswara/koushik/InRes164_Ci10/InResNet.py", line 333, in forward
+    x=b(x)+(1-functional.relu(1-self.ks[i])).expand_as(residual)*residual
+RuntimeError: CUDA out of memory. Tried to allocate 64.00 MiB (GPU 0; 10.76 GiB total capacity; 9.36 GiB already allocated; 31.12 MiB free; 9.75 GiB reserved in total by PyTorch)
