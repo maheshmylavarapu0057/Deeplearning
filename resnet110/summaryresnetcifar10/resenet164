@@ -1,0 +1,89 @@
+==========================================
+SLURM_JOB_ID = 376158
+SLURM_NODELIST = gnode17
+SLURM_JOB_GPUS = 0
+==========================================
+Files already downloaded and verified
+Files already downloaded and verified
+--------------------------------------------------------------------------
+      Layer (type)           Output Shape         Param #     Tr. Param #
+==========================================================================
+          Conv2d-1      [128, 16, 32, 32]             432             432
+      Downsample-2      [128, 64, 32, 32]           1,056           1,056
+      Bottleneck-3      [128, 64, 32, 32]           3,680           3,680
+      Bottleneck-4      [128, 64, 32, 32]           4,544           4,544
+      Bottleneck-5      [128, 64, 32, 32]           4,544           4,544
+      Bottleneck-6      [128, 64, 32, 32]           4,544           4,544
+      Bottleneck-7      [128, 64, 32, 32]           4,544           4,544
+      Bottleneck-8      [128, 64, 32, 32]           4,544           4,544
+      Bottleneck-9      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-10      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-11      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-12      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-13      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-14      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-15      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-16      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-17      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-18      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-19      [128, 64, 32, 32]           4,544           4,544
+     Bottleneck-20      [128, 64, 32, 32]           4,544           4,544
+     Downsample-21     [128, 128, 16, 16]           8,320           8,320
+     Bottleneck-22     [128, 128, 16, 16]          15,616          15,616
+     Bottleneck-23     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-24     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-25     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-26     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-27     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-28     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-29     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-30     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-31     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-32     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-33     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-34     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-35     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-36     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-37     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-38     [128, 128, 16, 16]          17,792          17,792
+     Bottleneck-39     [128, 128, 16, 16]          17,792          17,792
+     Downsample-40       [128, 256, 8, 8]          33,024          33,024
+     Bottleneck-41       [128, 256, 8, 8]          61,952          61,952
+     Bottleneck-42       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-43       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-44       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-45       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-46       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-47       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-48       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-49       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-50       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-51       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-52       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-53       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-54       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-55       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-56       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-57       [128, 256, 8, 8]          70,400          70,400
+     Bottleneck-58       [128, 256, 8, 8]          70,400          70,400
+    BatchNorm2d-59       [128, 256, 8, 8]             512             512
+           ReLU-60       [128, 256, 8, 8]               0               0
+      AvgPool2d-61       [128, 256, 1, 1]               0               0
+         Linear-62              [128, 10]           2,570           2,570
+==========================================================================
+Total params: 1,703,674
+Trainable params: 1,703,674
+Non-trainable params: 0
+--------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "train.py", line 398, in <module>
+    Trainer.train()
+  File "train.py", line 192, in train
+    acc, parastr = train_epoch(self.net,self.optimizer,self.trainloader,self.testloader,self.iter_time,self.lr_adjust,self.output)
+  File "train.py", line 144, in train_epoch
+    train(data, info)
+  File "train.py", line 110, in train
+    loss = criterion(outputs, labels)
+NameError: name 'outputs' is not defined
+Train completed
+Test noise series are impulse_noise.npy, speckle_noise.npy, gaussian_noise.npy, shot_noise.npy

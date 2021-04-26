@@ -1,0 +1,88 @@
+==========================================
+SLURM_JOB_ID = 376171
+SLURM_NODELIST = gnode26
+SLURM_JOB_GPUS = 1
+==========================================
+Files already downloaded and verified
+Files already downloaded and verified
+-------------------------------------------------------------------------
+      Layer (type)          Output Shape         Param #     Tr. Param #
+=========================================================================
+          Conv2d-1     [128, 16, 32, 32]             432             432
+      BasicBlock-2     [128, 16, 32, 32]           4,672           4,672
+      BasicBlock-3     [128, 16, 32, 32]           4,672           4,672
+      BasicBlock-4     [128, 16, 32, 32]           4,672           4,672
+      BasicBlock-5     [128, 16, 32, 32]           4,672           4,672
+      BasicBlock-6     [128, 16, 32, 32]           4,672           4,672
+      BasicBlock-7     [128, 16, 32, 32]           4,672           4,672
+      BasicBlock-8     [128, 16, 32, 32]           4,672           4,672
+      BasicBlock-9     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-10     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-11     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-12     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-13     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-14     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-15     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-16     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-17     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-18     [128, 16, 32, 32]           4,672           4,672
+     BasicBlock-19     [128, 16, 32, 32]           4,672           4,672
+     Downsample-20     [128, 32, 16, 16]             544             544
+     BasicBlock-21     [128, 32, 16, 16]          13,920          13,920
+     BasicBlock-22     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-23     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-24     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-25     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-26     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-27     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-28     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-29     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-30     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-31     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-32     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-33     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-34     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-35     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-36     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-37     [128, 32, 16, 16]          18,560          18,560
+     BasicBlock-38     [128, 32, 16, 16]          18,560          18,560
+     Downsample-39       [128, 64, 8, 8]           2,112           2,112
+     BasicBlock-40       [128, 64, 8, 8]          55,488          55,488
+     BasicBlock-41       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-42       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-43       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-44       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-45       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-46       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-47       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-48       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-49       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-50       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-51       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-52       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-53       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-54       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-55       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-56       [128, 64, 8, 8]          73,984          73,984
+     BasicBlock-57       [128, 64, 8, 8]          73,984          73,984
+    BatchNorm2d-58       [128, 64, 8, 8]             128             128
+           ReLU-59       [128, 64, 8, 8]               0               0
+      AvgPool2d-60       [128, 64, 1, 1]               0               0
+         Linear-61             [128, 10]             650             650
+=========================================================================
+Total params: 1,730,618
+Trainable params: 1,730,618
+Non-trainable params: 0
+-------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "train.py", line 398, in <module>
+    Trainer.train()
+  File "train.py", line 192, in train
+    acc, parastr = train_epoch(self.net,self.optimizer,self.trainloader,self.testloader,self.iter_time,self.lr_adjust,self.output)
+  File "train.py", line 144, in train_epoch
+    train(data, info)
+  File "train.py", line 110, in train
+    loss = criterion(outputs, labels)
+NameError: name 'outputs' is not defined
+Train completed
+Test noise series are impulse_noise.npy, speckle_noise.npy, gaussian_noise.npy, shot_noise.npy
