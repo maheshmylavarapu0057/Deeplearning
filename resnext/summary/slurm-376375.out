@@ -1,0 +1,44 @@
+==========================================
+SLURM_JOB_ID = 376375
+SLURM_NODELIST = gnode42
+SLURM_JOB_GPUS = 1
+==========================================
+i am in line 348,inresnext.py
+Files already downloaded and verified
+Files already downloaded and verified
+i am in line 348,inresnext.py
+------------------------------------------------------------------------------
+           Layer (type)           Input Shape         Param #     Tr. Param #
+==============================================================================
+               Conv2d-1      [128, 3, 32, 32]           9,408           9,408
+          BatchNorm2d-2     [128, 64, 16, 16]             128             128
+                 ReLU-3     [128, 64, 16, 16]               0               0
+            MaxPool2d-4     [128, 64, 16, 16]               0               0
+           Bottleneck-5       [128, 64, 8, 8]         478,208         478,208
+           Bottleneck-6      [128, 256, 8, 8]         559,616         559,616
+           Bottleneck-7      [128, 256, 8, 8]       2,103,296       2,103,296
+           Bottleneck-8      [128, 512, 4, 4]       2,233,344       2,233,344
+           Bottleneck-9      [128, 512, 4, 4]       2,233,344       2,233,344
+          Bottleneck-10      [128, 512, 4, 4]       8,400,896       8,400,896
+          Bottleneck-11     [128, 1024, 2, 2]       8,923,136       8,923,136
+          Bottleneck-12     [128, 1024, 2, 2]      33,579,008      33,579,008
+          Bottleneck-13     [128, 2048, 1, 1]      35,672,064      35,672,064
+   AdaptiveAvgPool2d-14     [128, 2048, 1, 1]               0               0
+              Linear-15           [128, 2048]          20,490          20,490
+==============================================================================
+Total params: 94,212,938
+Trainable params: 94,212,938
+Non-trainable params: 0
+------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "train.py", line 417, in <module>
+    Trainer.train()
+  File "train.py", line 208, in train
+    acc, parastr = train_epoch(self.net,self.optimizer,self.trainloader,self.testloader,self.iter_time,self.lr_adjust,self.output)
+  File "train.py", line 158, in train_epoch
+    train(data, info)
+  File "train.py", line 124, in train
+    loss = criterion(outputs, labels)
+NameError: name 'outputs' is not defined
+Train completed
+Test noise series are impulse_noise.npy, speckle_noise.npy, gaussian_noise.npy, shot_noise.npy
